@@ -104,9 +104,9 @@ const --> hoist --> error
 // //output:Inside: 20  Outside: 10
 
 //Example:5
-const person ={name: "demo"};
-console.log
-person.name="user";
-person ={};
-//output: error
+const person ={name: "demo" , gender: "male"};
+// console.log(person);
+// person.name="user";
+// person ={};
+// //output: error
 //why: using const variable not change the value

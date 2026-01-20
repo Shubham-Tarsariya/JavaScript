@@ -150,3 +150,171 @@ var   → hoist → undefined
 let   → hoist → error
 const → hoist → error
 </pre>
+
+
+<h1>JavaScript Data Types</h1>
+
+<p>JavaScript data types are divided into <strong>two main categories</strong>:</p>
+
+<ul>
+    <li><strong>Primitive Data Types</strong></li>
+    <li><strong>Non-Primitive (Reference) Data Types</strong></li>
+</ul>
+
+<hr>
+
+<h2>1. Primitive Data Types</h2>
+
+<p>Primitive data types store <strong>real values</strong>.  
+When copied, the <strong>value is copied</strong>, not the reference.</p>
+
+<h3>Example</h3>
+<pre><code>
+let a = 12;
+let b = a;   // value copied
+a = a + 3;
+</code></pre>
+
+<h3>Types of Primitive Data Types</h3>
+<ul>
+    <li>string</li>
+    <li>number</li>
+    <li>boolean</li>
+    <li>null</li>
+    <li>undefined</li>
+    <li>symbol</li>
+    <li>bigint</li>
+</ul>
+
+<hr>
+
+<h3>String</h3>
+<p>Strings represent textual data.</p>
+<pre><code>
+let d = "name";
+d = 'username';
+d = `firstname`;
+</code></pre>
+
+<hr>
+
+<h3>Number</h3>
+<p>Used for integers and floating-point numbers.</p>
+<pre><code>
+let e = 12;
+e = 12.5;
+</code></pre>
+
+<hr>
+
+<h3>Boolean</h3>
+<p>Represents true or false.</p>
+<pre><code>
+let f = true;
+f = false;
+</code></pre>
+
+<hr>
+
+<h3>Null</h3>
+<p>Represents an intentional empty value.</p>
+<pre><code>
+let g = null;
+</code></pre>
+
+<hr>
+
+<h3>Undefined</h3>
+<p>A variable declared but not assigned a value.</p>
+<pre><code>
+let h;
+</code></pre>
+
+<hr>
+
+<h3>Symbol</h3>
+<p>Symbols create <strong>unique and immutable</strong> values.</p>
+<pre><code>
+let u1 = Symbol("uid");
+let u2 = Symbol("uid"); // u1 !== u2
+
+let obj = { uid: 1, name: "test", email: "test@test.com" };
+let u3 = Symbol("uid");
+obj[u3] = "001";
+</code></pre>
+
+<hr>
+
+<h3>BigInt</h3>
+<p>Used for very large integers beyond <code>Number.MAX_SAFE_INTEGER</code>.</p>
+<pre><code>
+let number = 9007199254740991;
+number = number + 9;
+
+let num2 = 9007199254740991n;
+num2 = num2 + 9n;
+</code></pre>
+
+<hr>
+
+<h2>2. Non-Primitive Data Types</h2>
+
+<p>Non-primitive data types store <strong>references</strong>.  
+When copied, they point to the <strong>same memory location</strong>.</p>
+
+<h3>Example</h3>
+<pre><code>
+let temp_a = [1, 2, 3];
+let temp_b = temp_a;
+temp_b.pop(); // affects temp_a also
+</code></pre>
+
+<h3>Types of Non-Primitive Data Types</h3>
+<ul>
+    <li>Object <code>{}</code></li>
+    <li>Array <code>[]</code></li>
+    <li>Function <code>()</code></li>
+</ul>
+
+<hr>
+
+<h3>Array</h3>
+<pre><code>
+let temp_array = ["name", "age", "phone number"];
+</code></pre>
+
+<hr>
+
+<h3>Object</h3>
+<pre><code>
+let obj = {
+    name: "test",
+    age: 21,
+    phone_number: 9988776655
+};
+</code></pre>
+
+<hr>
+
+<h3>Function</h3>
+<pre><code>
+function name(params) {
+    // function body
+}
+</code></pre>
+
+<hr>
+
+<h2>Dynamic Typing</h2>
+
+<p>JavaScript is a <strong>dynamically typed language</strong>, meaning variable types are determined at runtime.</p>
+
+<pre><code>
+let x = 10;
+x = "Hello";
+x = true;
+</code></pre>
+
+<hr>
+
+<p><strong>Author:</strong> JavaScript Learning Notes</p>
