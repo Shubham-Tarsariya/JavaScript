@@ -64,7 +64,7 @@ num2 = num2 + 9n;
 // <--------Non-Primitive Data Types-------->
 // types: object {}, array [], function ()
 let temp_array = ["name","age","phone number"];
-let obj = {name: "test", age: 21, phone_number:9988776655 }
+// let obj = {name: "test", age: 21, phone_number:9988776655 }
 function name(params){}
 
 // Dynamic Typing 
@@ -83,3 +83,11 @@ temp_d = {};
 // type coeration
 // "5" + 1
 // "5" - 1
+
+
+// Truthy vs Falsy Values
+// 0, false, "", null, undefined, NaN, document.all, -- false
+// ex. !!0 -- check value is true or false
+// ex. if(null){}, js convert it into false
+// ex. if(-1){}, js convert it into true
+// all --> true
