@@ -66,4 +66,20 @@ num2 = num2 + 9n;
 let temp_array = ["name","age","phone number"];
 let obj = {name: "test", age: 21, phone_number:9988776655 }
 function name(params){}
+
 // Dynamic Typing 
+let temp_d = "name";
+temp_d = 123;
+temp_d = {};
+// JavaScript --> Javascript
+
+// typeof quicks
+// typeof 12
+// check type of variable use --> ex. typeof NaN, typeof null, 1 + "1", 1 == "1", 1 === "1"
+// why typeof NaN --> number
+// NaN is a failed number operations that why that type is number 
+//ex. "hello" - 5 --> NaN
+
+// type coeration
+// "5" + 1
+// "5" - 1
