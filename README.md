@@ -317,4 +317,270 @@ x = true;
 
 <hr>
 
-<p><strong>Author:</strong> JavaScript Learning Notes</p>
+<h2> typeof – Quick Checks</h2>
+
+<p>
+The <code>typeof</code> operator is used to <strong>check the type of a variable</strong>.
+</p>
+
+<pre>
+typeof 12          // "number"
+typeof NaN         // "number"
+typeof null        // "object"
+typeof "hello"     // "string"
+typeof true        // "boolean"
+</pre>
+
+<h3>Important typeof Quirks</h3>
+
+<ul>
+  <li><strong>typeof NaN → number</strong></li>
+  <li><strong>typeof null → object</strong></li>
+</ul>
+
+<p>
+<strong>Why typeof NaN is number?</strong><br>
+NaN means <em>Not a Number</em>, but it is the result of a <strong>failed numeric operation</strong>,
+so JavaScript still treats it as a number type.
+</p>
+
+<pre>
+"hello" - 5   // NaN
+typeof ("hello" - 5) // "number"
+</pre>
+
+<hr>
+
+<h2>Comparison Examples</h2>
+
+<pre>
+1 + "1"    // "11"
+1 == "1"   // true
+1 === "1"  // false
+</pre>
+
+<ul>
+  <li><code>==</code> → compares value only (type coercion happens)</li>
+  <li><code>===</code> → compares value and type (strict comparison)</li>
+</ul>
+
+<hr>
+
+<h2>Type Coercion</h2>
+
+<p>
+<strong>Type coercion</strong> means JavaScript automatically converts one data type
+into another during operations.
+</p>
+
+<h3>Example 1: String + Number</h3>
+
+<pre>
+"5" + 1
+</pre>
+
+<p><strong>Output:</strong> "51"</p>
+<p><strong>Reason:</strong> <code>+</code> operator performs string concatenation.</p>
+
+<h3>Example 2: String - Number</h3>
+
+<pre>
+"5" - 1
+</pre>
+
+<p><strong>Output:</strong> 4</p>
+<p><strong>Reason:</strong> <code>-</code> operator converts string to number.</p>
+
+<hr>
+
+<h2>Truthy vs Falsy Values</h2>
+
+<p>
+In JavaScript, values are automatically converted to <strong>true</strong> or
+<strong>false</strong> in conditional statements.
+</p>
+
+<h3> Falsy Values (Only These Are False)</h3>
+
+<ul>
+  <li>0</li>
+  <li>false</li>
+  <li>"" (empty string)</li>
+  <li>null</li>
+  <li>undefined</li>
+  <li>NaN</li>
+  <li>document.all (special case)</li>
+</ul>
+
+<pre>
+!!0          // false
+!!null       // false
+!!NaN        // false
+</pre>
+
+<hr>
+
+<h3> Truthy Values</h3>
+
+<p>
+<strong>All values except falsy values are truthy.</strong>
+</p>
+
+<pre>
+!!-1        // true
+!!1         // true
+!!"JS"      // true
+!![]        // true
+!!{}        // true
+</pre>
+
+<hr>
+
+<h1> JavaScript Operators </h1>
+
+<p>
+This document explains all major <strong>JavaScript Operators</strong> with
+examples and outputs. It is useful for <strong>beginners, interview preparation,
+and revision</strong>.
+</p>
+
+<hr>
+
+<h2>1. Arithmetic Operators</h2>
+<ul>
+  <li><strong>+</strong> → Addition / Concatenation</li>
+  <li><strong>-</strong> → Subtraction</li>
+  <li><strong>*</strong> → Multiplication</li>
+  <li><strong>/</strong> → Division</li>
+  <li><strong>%</strong> → Modulus (Remainder)</li>
+  <li><strong>**</strong> → Exponentiation (Power)</li>
+</ul>
+
+<pre>
+1 + 2        // 3
+"user" + "name"  // username
+12 % 4       // 0
+2 ** 3       // 8
+</pre>
+
+<hr>
+
+<h2>2. Comparison Operators (Result: true / false)</h2>
+<ul>
+  <li><strong>==</strong> → Value comparison (not strict)</li>
+  <li><strong>===</strong> → Value + Type comparison (strict)</li>
+  <li><strong>!=</strong> → Not equal</li>
+  <li><strong>!==</strong> → Strict not equal</li>
+  <li><strong>&gt; , &lt; , &gt;= , &lt;=</strong></li>
+</ul>
+
+<pre>
+12 == "12"   // true
+12 === "12"  // false
+12 != 13     // true
+22 >= 22     // true
+</pre>
+
+<hr>
+
+<h2>3. Assignment Operators</h2>
+<ul>
+  <li><strong>=</strong></li>
+  <li><strong>+=</strong></li>
+  <li><strong>-=</strong></li>
+  <li><strong>*=</strong></li>
+  <li><strong>/=</strong></li>
+  <li><strong>%=</strong></li>
+</ul>
+
+<pre>
+let a = 12;
+a += 3;   // 15
+a -= 4;   // 11
+a *= 2;   // 24
+</pre>
+
+<hr>
+
+<h2>4. Logical Operators</h2>
+<ul>
+  <li><strong>&&</strong> → AND</li>
+  <li><strong>||</strong> → OR</li>
+  <li><strong>!</strong> → NOT</li>
+</ul>
+
+<pre>
+true && false   // false
+true || false   // true
+!true           // false
+</pre>
+
+<hr>
+
+<h2> 5. Unary Operators</h2>
+<ul>
+  <li><strong>+</strong> → Convert string to number</li>
+  <li><strong>-</strong> → Negation</li>
+  <li><strong>!</strong> → Logical NOT</li>
+  <li><strong>typeof</strong></li>
+  <li><strong>++</strong> → Increment</li>
+  <li><strong>--</strong> → Decrement</li>
+</ul>
+
+<pre>
++"5"        // 5
+typeof "JS" // string
+let a = 5;
+a++;        // 6
+</pre>
+
+<hr>
+
+<h2> 6. Ternary Operator</h2>
+
+<pre>
+condition ? trueValue : falseValue
+</pre>
+
+<pre>
+let score = 78;
+let grade = score >= 90 ? "A" :
+            score >= 80 ? "B" :
+            score >= 70 ? "C" : "D";
+// Output: C
+</pre>
+
+<hr>
+
+<h2> Important JavaScript Facts</h2>
+<ul>
+  <li><strong>typeof null</strong> → object</li>
+  <li><strong>typeof NaN</strong> → number</li>
+  <li><strong>typeof</strong> → Use for primitive types</li>
+  <li><strong>instanceof</strong> → Use for reference types</li>
+</ul>
+
+<pre>
+let arr = [];
+arr instanceof Array // true
+</pre>
+
+<hr>
+
+<h2> Logical Examples</h2>
+
+<pre>
+let x = 10, y = 20;
+if (x > 5 && y > 5) {
+  console.log("Both are greater than 5");
+}
+</pre>
+
+<pre>
+let count = 5;
+if (count-- === 5) {
+  console.log("Matched");
+}
+</pre>
+
+<hr>

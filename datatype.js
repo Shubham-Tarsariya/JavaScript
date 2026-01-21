@@ -91,3 +91,32 @@ temp_d = {};
 // ex. if(null){}, js convert it into false
 // ex. if(-1){}, js convert it into true
 // all --> true
+
+// Example:1
+// console.log(true+false); 
+// output: 1
+
+// Example:2
+// console.log(null+1);
+// output: 1
+
+// Example:3
+// console.log("12"+12);
+// output: 1212
+
+// Example:4
+// console.log(!!undefined);
+// output: false
+
+// Example:5
+// console.log("12" - 1);
+// output: 11
+
+// Example:6
+//  let x;
+//  console.log(x);
+// output: undefined
+
+// let y = null;
+// console.log(y);
+// output: null
