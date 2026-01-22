@@ -584,3 +584,333 @@ if (count-- === 5) {
 </pre>
 
 <hr>
+<h1>Control Flow Statements in JavaScript</h1>
+
+<p>
+Control flow statements allow you to control the execution flow of your JavaScript code
+based on conditions and logic.
+</p>
+
+<hr>
+
+<h2>1️ If Statement</h2>
+
+<pre><code>
+if (12 &lt; 13) {
+    console.log(true);
+}
+
+if (15 &lt; 13) {
+    console.log(true);
+}
+
+// condition is false, so this will not run
+
+if (!12) {
+    console.log("number");
+}
+</code></pre>
+
+<div class="note">
+<strong>Note:</strong> Numbers except <code>0</code> are truthy in JavaScript.
+</div>
+
+<hr>
+
+<h2> If-Else Statement</h2>
+
+<pre><code>
+if (12 &lt; 13) {
+    console.log(true);
+} else {
+    console.log(false);
+}
+
+if (15 &lt; 13) {
+    console.log(true);
+} else {
+    console.log(false);
+}
+
+if (!12) {
+    console.log("Number");
+} else {
+    console.log("Not A Number");
+}
+</code></pre>
+
+<hr>
+
+<h2> If – Else If – Else Statement</h2>
+
+<pre><code>
+if (condition) {
+    // code
+} else if (condition) {
+    // code
+} else {
+    // code
+}
+</code></pre>
+
+<pre><code>
+if (loggedin && admin) {
+    console.log("welcome admin");
+} else if (loggedin) {
+    console.log("welcome user");
+} else {
+    console.log("go to login page");
+}
+</code></pre>
+
+<hr>
+
+<h2> Switch Case Statement</h2>
+
+<pre><code>
+switch ('First50') {
+    case 'First50':
+        console.log("50% off on First Order");
+        break;
+    case 'BOGO':
+        console.log("Buy one get one");
+        break;
+    case 'BlackFriday':
+        console.log("It's Black Friday Sale - get at Rs. 50");
+        break;
+    default:
+        console.log("Offer Not Valid");
+        break;
+}
+</code></pre>
+
+<pre><code>
+switch ('Day4') {
+    case 'Day1':
+        console.log("Monday");
+        break;
+    case 'Day2':
+        console.log("Tuesday");
+        break;
+    case 'Day3':
+        console.log("Wednesday");
+        break;
+    default:
+        console.log("Thursday");
+        break;
+}
+</code></pre>
+
+<hr>
+
+<h2>Early Return Pattern</h2>
+
+<pre><code>
+function score(value) {
+    if (value &gt; 90) {
+        return "Value is more than 90";
+    } else if (value &lt; 80) {
+        return "Value is less than 80";
+    } else if (value &lt; 70) {
+        return "Value is less than 70";
+    } else if (value &lt; 60) {
+        return "Value is less than 60";
+    } else {
+        return "Value is less than 60";
+    }
+}
+</code></pre>
+
+<pre><code>
+function score2(value) {
+    if (value &lt; 60) return "Value is less than 60";
+    else if (value &lt; 70) return "Value is less than 70";
+    else if (value &lt; 80) return "Value is less than 80";
+    else if (value &lt; 90) return "Value is less than 90";
+    else return "Value is more than 90";
+}
+</code></pre>
+
+<hr>
+
+<h2> Rock Paper Scissors Example</h2>
+
+<pre><code>
+function rps(user, computer) {
+    if (user === "rock" && computer === "scissor") return "user wins";
+    if (user === "scissor" && computer === "paper") return "user wins";
+    if (user === "paper" && computer === "rock") return "user wins";
+    if (user === "scissor" && computer === "rock") return "computer wins";
+    if (user === "rock" && computer === "paper") return "computer wins";
+    if (user === "paper" && computer === "scissor") return "computer wins";
+    return "it's a tie";
+}
+</code></pre>
+
+<hr>
+
+<h2> Switch Fall-Through Example</h2>
+
+<pre><code>
+let x = 2;
+switch (x) {
+    case 2:
+        console.log("Two");
+    case 3:
+        console.log("Three");
+}
+</code></pre>
+
+<p><strong>Output:</strong> Two Three</p>
+
+<hr>
+
+<h2>Grade Calculation Example</h2>
+
+<pre><code>
+function getGrade(score) {
+    if (score &gt;= 90 && score &lt;= 100) return "A+";
+    else if (score &gt;= 80 && score &lt; 89) return "A";
+    else if (score &gt;= 70 && score &lt; 79) return "B";
+    else if (score &gt;= 60 && score &lt; 69) return "C";
+    else if (score &gt;= 33 && score &lt; 59) return "D";
+    else if (score &gt;= 0 && score &lt; 32) return "Fail";
+    else return "Invalid Marks";
+}
+</code></pre>
+
+<hr>
+
+<h1> JavaScript Loops</h1>
+
+<p>
+Loops are used to <strong>repeat a block of code multiple times</strong>.
+They are very useful when you need to perform the same task again and again.
+</p>
+
+<hr>
+
+<h2>🔹 Why Use Loops?</h2>
+<ul>
+    <li>To avoid writing repeated code</li>
+    <li>To execute code multiple times automatically</li>
+    <li>Best for working with numbers, arrays, and conditions</li>
+</ul>
+
+<hr>
+
+<h2> For Loop</h2>
+
+<p>
+Use a <strong>for loop</strong> when you know <strong>how many times</strong>
+the loop should run.
+</p>
+
+<p><strong>Syntax:</strong></p>
+
+<pre><code>
+for (start; condition; change) {
+    // code
+}
+</code></pre>
+
+<p><strong>Example: Print 1 to 10</strong></p>
+
+<pre><code>
+for (let i = 1; i &lt;= 10; i++) {
+    console.log(i);
+}
+</code></pre>
+
+<p><strong>Example: Print 20 to 10 (reverse)</strong></p>
+
+<pre><code>
+for (let i = 20; i &gt;= 10; i--) {
+    console.log(i);
+}
+</code></pre>
+
+<div class="note">
+<strong>Gujarati Hint:</strong><br>
+kaya thi javanu chhe → kaya sudhi javanu chhe → kevi rite javanu chhe
+</div>
+
+<hr>
+
+<h2> While Loop</h2>
+
+<p>
+Use a <strong>while loop</strong> when you <strong>do not know</strong>
+how many times the loop will run.
+</p>
+
+<p><strong>Syntax:</strong></p>
+
+<pre><code>
+start;
+while (condition) {
+    // code
+    change;
+}
+</code></pre>
+
+<p><strong>Example:</strong></p>
+
+<pre><code>
+let j = 10;
+while (j &lt;= 20) {
+    console.log("j :", j);
+    j++;
+}
+</code></pre>
+
+<p><strong>Reverse Example:</strong></p>
+
+<pre><code>
+let k = 50;
+while (k &gt;= 20) {
+    console.log(k);
+    k--;
+}
+</code></pre>
+
+<hr>
+
+<h2> Do While Loop</h2>
+
+<p>
+The <strong>do while loop</strong> executes the code <strong>at least once</strong>,
+even if the condition is false.
+</p>
+
+<p><strong>Syntax:</strong></p>
+
+<pre><code>
+start;
+do {
+    // code
+    change;
+} while (condition);
+</code></pre>
+
+<p><strong>Example: Print 10 to 20</strong></p>
+
+<pre><code>
+let g = 10;
+do {
+    console.log("do while:", g);
+    g++;
+} while (g &lt;= 20);
+</code></pre>
+
+<p><strong>Example: Print 10 to 1</strong></p>
+
+<pre><code>
+let h = 10;
+do {
+    console.log("do while1:", h);
+    h--;
+} while (h &gt;= 1);
+</code></pre>
+
+<hr>
