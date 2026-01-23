@@ -914,3 +914,62 @@ do {
 </code></pre>
 
 <hr>
+<h2>1. break Statement</h2>
+    <p>
+        The <strong>break</strong> statement is used to immediately stop the loop
+        when a specific condition is met.
+    </p>
+
+    <pre><code>
+// Example 1: Stop loop when value reaches 32
+for (let k = 1; k &lt;= 201; k++) {
+    console.log(k);
+    if (k === 32) {
+        break;
+    }
+}
+    </code></pre>
+
+    <pre><code>
+// Example 2: Reverse loop with break
+for (let k = 64; k &gt;= 1; k--) {
+    console.log(k);
+    if (k === 32) {
+        break;
+    }
+}
+    </code></pre>
+
+    <div class="note">
+        👉 <strong>Use break</strong> when you want to exit the loop completely.
+    </div>
+
+    <hr>
+
+    <h2>2. continue Statement</h2>
+    <p>
+        The <strong>continue</strong> statement skips the current iteration
+        and moves to the next loop cycle.
+    </p>
+
+    <pre><code>
+// Example 1: Skip number 5
+for (let a = 1; a &lt;= 10; a++) {
+    if (a === 5) {
+        continue;
+    }
+    console.log(a);
+}
+    </code></pre>
+
+    <pre><code>
+// Example 2: Reverse loop skipping 5
+for (let h = 10; h &gt;= 1; h--) {
+    if (h === 5) {
+        continue;
+    }
+    console.log(h);
+}
+    </code></pre>
+
+    <hr>
