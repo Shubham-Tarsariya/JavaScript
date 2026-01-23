@@ -973,3 +973,228 @@ for (let h = 10; h &gt;= 1; h--) {
     </code></pre>
 
     <hr>
+
+<h1>JavaScript Functions – README</h1>
+
+<p>
+A <strong>function</strong> is a block of code that performs a specific task.
+Functions help in avoiding code repetition and make code reusable and modular.
+</p>
+
+<hr>
+
+<h2>Why Use Functions?</h2>
+<ul>
+    <li>Avoid code repetition</li>
+    <li>Improve readability</li>
+    <li>Make code modular & reusable</li>
+</ul>
+
+<hr>
+
+<h2>Types of Functions</h2>
+
+<h3>1. Function Declaration</h3>
+<pre><code>
+function abc() {}
+</code></pre>
+
+<h3>2. Function Expression</h3>
+<pre><code>
+let fnc = function () {};
+</code></pre>
+
+<h3>3. Arrow Function (Fat Arrow)</h3>
+<pre><code>
+let fnc1 = () => {};
+</code></pre>
+
+<hr>
+
+<h2>Basic Function Example</h2>
+<pre><code>
+function temp_cart() {
+    console.log("adding product");
+}
+
+temp_cart("laptop");
+temp_cart("watch");
+temp_cart("mobile");
+</code></pre>
+
+<hr>
+
+<h2>Parameters vs Arguments</h2>
+<ul>
+    <li><strong>Parameters</strong> → variables listed in function definition</li>
+    <li><strong>Arguments</strong> → real values passed during function call</li>
+</ul>
+
+<pre><code>
+function cart(product) { // parameter
+    console.log(`Adding ${product}`);
+}
+
+cart("Laptop"); // argument
+cart("Mac Book");
+cart("S25 Ultra");
+</code></pre>
+
+<hr>
+
+<h2>Multiple Parameters</h2>
+<pre><code>
+function cart2(product, price) {
+    console.log(`Adding ${product} at ${price}`);
+}
+
+cart2("Laptop", 50000);
+cart2("Mac Book", 250000);
+</code></pre>
+
+<hr>
+
+<h2>Example: Buy Clothes</h2>
+<pre><code>
+function buy_clothes(clothe, size, price) {
+    console.log(`Buying ${clothe} of size ${size} at price ${price}`);
+}
+
+buy_clothes("T-shirt", "M", 500);
+buy_clothes("Jeans", "32", 1200);
+</code></pre>
+
+<hr>
+
+<h2>Arrow Function Conversion</h2>
+<pre><code>
+let buy_clothes1 = (clothe, size, price) => {
+    console.log(`Buying ${clothe} of size ${size} at price ${price}`);
+};
+
+buy_clothes1("T-shirt", "L", 1000);
+</code></pre>
+
+<hr>
+
+<h2>Function Expression Conversion</h2>
+<pre><code>
+let buy_clothes2 = function(clothe, size, price) {
+    console.log(`Buying ${clothe} of size ${size} at price ${price}`);
+};
+
+buy_clothes2("T-shirt", "L", 1500);
+</code></pre>
+
+<hr>
+
+<h2>Default Parameters</h2>
+<pre><code>
+function abcd(b = 10, price = 0) {
+    console.log(price, b);
+}
+
+abcd(15);
+</code></pre>
+
+<div class="note">
+    👉 Default parameters are useful for platform fees, taxes, etc.
+</div>
+
+<hr>
+
+<h2>Rest Parameters</h2>
+<pre><code>
+function def1(...numbers) {
+    console.log(numbers);
+}
+
+def1(1,2,3,4,5,6,7,8,9,10);
+</code></pre>
+
+<h3>Example with Rest Parameters</h3>
+<pre><code>
+function buy_clothes3(...details) {
+    console.log(details);
+}
+
+buy_clothes3("T-shirt", "M", 500, "Blue", "Cotton");
+</code></pre>
+
+<hr>
+
+<h2>Early Return</h2>
+<pre><code>
+function getValue1(value) {
+    if (value < 25) return "Value is less than 25";
+    else if (value < 50) return "Value is less than 50";
+    else if (value < 75) return "Value is less than 75";
+    return "Value is 100 or more";
+}
+
+let result = getValue1(80);
+console.log(result);
+</code></pre>
+
+<hr>
+
+<h2>First Class Functions</h2>
+<ul>
+    <li>Functions can be stored in variables</li>
+    <li>Functions can be passed as arguments</li>
+    <li>Functions can be returned from other functions</li>
+</ul>
+
+<pre><code>
+const cart5 = function(product, price) {
+    console.log(`Adding ${product} at ${price}`);
+};
+
+cart5("S25 Ultra", 69000);
+</code></pre>
+
+<hr>
+
+<h2>Function as Argument</h2>
+<pre><code>
+function temp_b(fnc) {
+    fnc();
+}
+
+temp_b(function () {
+    console.log("First Class Function");
+});
+</code></pre>
+
+<hr>
+
+<h2>Function Returning Function</h2>
+<pre><code>
+function abcd() {
+    return function () {
+        console.log("Function returned from another function");
+    };
+}
+
+abcd()();
+</code></pre>
+
+<hr>
+
+<h2>Higher Order Function (HOF)</h2>
+<p>
+A Higher Order Function is a function that accepts another function
+as an argument or returns a function.
+</p>
+
+<pre><code>
+function hof_example(fnc) {
+    fnc();
+}
+
+hof_example(function () {
+    console.log("Higher Order Function");
+});
+</code></pre>
+
+<hr>
