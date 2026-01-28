@@ -944,9 +944,9 @@ for (let k = 64; k &gt;= 1; k--) {
         👉 <strong>Use break</strong> when you want to exit the loop completely.
     </div>
 
-    <hr>
+<hr>
 
-    <h2>2. continue Statement</h2>
+<h2>2. continue Statement</h2>
     <p>
         The <strong>continue</strong> statement skips the current iteration
         and moves to the next loop cycle.
@@ -1098,7 +1098,7 @@ abcd(15);
 </code></pre>
 
 <div class="note">
-    👉 Default parameters are useful for platform fees, taxes, etc.
+    Default parameters are useful for platform fees, taxes, etc.
 </div>
 
 <hr>
