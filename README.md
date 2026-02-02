@@ -941,7 +941,7 @@ for (let k = 64; k &gt;= 1; k--) {
     </code></pre>
 
     <div class="note">
-        👉 <strong>Use break</strong> when you want to exit the loop completely.
+        <strong>Use break</strong> when you want to exit the loop completely.
     </div>
 
 <hr>
@@ -1195,6 +1195,127 @@ function hof_example(fnc) {
 hof_example(function () {
     console.log("Higher Order Function");
 });
+</code></pre>
+
+<hr>
+<h2>Pure vs Impure Functions</h2>
+
+<h3>Pure Function</h3>
+<ul>
+    <li>Always returns the same output for the same input</li>
+    <li>Does not modify external state</li>
+</ul>
+
+<pre><code>
+function abcd_pure() {
+    console.log("Hello");
+}
+</code></pre>
+
+<h3>Impure Function</h3>
+<ul>
+    <li>Modifies external state OR</li>
+    <li>Returns different output for same input</li>
+</ul>
+
+<pre><code>
+let a = 10;
+function abcd_impure() {
+    a++;
+    console.log(a);
+}
+</code></pre>
+
+<hr>
+
+<h2>Closure Function</h2>
+
+<p>
+A closure is created when an inner function accesses variables of its outer
+(parent) function even after the parent function has returned.
+</p>
+
+<pre><code>
+function outer() {
+    let count = 0;
+    function inner() {
+        count++;
+        console.log(count);
+    }
+    return inner;
+}
+
+let fnc3 = outer();
+fnc3();
+</code></pre>
+
+<div class="note">
+     Closure retains access to <strong>count</strong> even after <code>outer()</code> execution.
+</div>
+
+<hr>
+
+<h2>Lexical Scope</h2>
+
+<p>
+Lexical scope means inner functions can access variables defined in their
+outer scope.
+</p>
+
+<pre><code>
+function outer1(){
+    let outer_var = "outer function variable";
+    function inner1(){
+        let inner_var = "inner function variable";
+        function most_inner(){
+            let most_inner_var = "most inner function variable";
+            function abc(){
+                console.log(most_inner_var);
+                console.log(inner_var);
+                console.log(outer_var);
+            }
+            abc();
+        }
+        most_inner();
+    }
+    inner1();
+}
+outer1();
+</code></pre>
+
+<hr>
+
+<h2>IIFE (Immediately Invoked Function Expression)</h2>
+
+<p>
+An IIFE runs immediately after it is defined.
+</p>
+
+<pre><code>
+(function (){
+    console.log("This is IIFE function");
+}());
+</code></pre>
+
+<hr>
+
+<h2>Hoisting in Functions</h2>
+
+<h3>Function Declaration (Hoisted)</h3>
+<pre><code>
+abcde();
+
+function abcde(){
+    console.log("This is Hoisting function");
+}
+</code></pre>
+
+<h3>Function Expression (Not Hoisted)</h3>
+<pre><code>
+// temp_var();
+// var temp_var = function(){
+//     console.log("Hello");
+// }
 </code></pre>
 
 <hr>
