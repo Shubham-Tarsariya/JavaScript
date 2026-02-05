@@ -1319,3 +1319,107 @@ function abcde(){
 </code></pre>
 
 <hr>
+
+<h1>📘 JavaScript Array </h1>
+arr[3]; // 4
+
+
+// Modify
+arr[0] = 10;
+arr[1] = 20;</code></pre>
+
+
+<h2>3. push() & pop()</h2>
+<pre><code>arr.push(5); // add last
+arr.pop(); // remove last</code></pre>
+<p><strong>Use case:</strong> Add or remove products from cart</p>
+
+
+<h2>4. shift() & unshift()</h2>
+<pre><code>arr.shift(); // remove first
+arr.unshift(1); // add first</code></pre>
+
+
+<h2>5. splice()</h2>
+<pre><code>let e = [50, 60, 30, 40, 10];
+e.splice(3, 2);</code></pre>
+<p><strong>Use case:</strong> Delete selected messages</p>
+
+
+<h2>6. slice()</h2>
+<pre><code>let f = [100, 50, 25, 0];
+let new_f = f.slice(1, 3);</code></pre>
+
+
+<h2>7. splice vs slice</h2>
+<ul>
+<li><strong>splice:</strong> modifies original array</li>
+<li><strong>slice:</strong> creates new array</li>
+</ul>
+
+
+<h2>8. reverse()</h2>
+<pre><code>let g = [25, 30, 35, 40];
+g.reverse();</code></pre>
+
+
+<h2>9. sort()</h2>
+<pre><code>let arr3 = [10, 2, 5, 20];
+arr3.sort((a, b) => a - b);</code></pre>
+<p><strong>Use case:</strong> Sort price low to high</p>
+
+
+<h2>10. forEach()</h2>
+<pre><code>let i = [10, 20, 30];
+i.forEach(val => console.log(val + 10));</code></pre>
+
+
+<h2>11. map()</h2>
+<pre><code>let data = [10, 20, 50];
+let result = data.map(val => val + 5);</code></pre>
+
+
+<h2>12. filter()</h2>
+<pre><code>let prices = [15000, 65000, 99000];
+let expensive = prices.filter(p => p > 30000);</code></pre>
+
+
+<h2>13. reduce()</h2>
+<pre><code>let total = [10, 20, 30].reduce((sum, v) => sum + v, 0);</code></pre>
+
+
+<h2>14. map + filter + reduce</h2>
+<pre><code>const prices4 = [200, 800, 1200, 450, 700];
+const totalAmount = prices4
+.filter(p => p > 500)
+.map(p => p - p * 0.1)
+.reduce((t, p) => t + p, 0);</code></pre>
+
+
+<h2>15. find()</h2>
+<pre><code>let product = ["Laptop", "Mobile", "Tablet"];
+let find_product = product.find(p => p === "Mobile");</code></pre>
+
+
+<h2>16. some()</h2>
+<pre><code>let marks = [10, 20, 90];
+let result = marks.some(m => m > 85);</code></pre>
+
+
+<h2>17. every()</h2>
+<pre><code>let scores = [20, 30, 35];
+let pass = scores.every(s => s > 18);</code></pre>
+
+
+<h2>18. Destructuring</h2>
+<pre><code>let arr5 = [1, 2, 3, 4];
+let [a, , b] = arr5;</code></pre>
+
+
+<h2>19. Spread Operator</h2>
+<pre><code>let arr8 = [1, 2, 3];
+let arr9 = [...arr8];
+
+
+let mix = [...[1,2], ...[3,4]];</code></pre>
+<hr />
