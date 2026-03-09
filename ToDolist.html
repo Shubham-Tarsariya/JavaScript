@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            background-color: rgb(0, 0, 0);
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* background-color: white; */
+        }
+        #main {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+        h1 {
+            color: rgb(166, 166, 166);
+            font-size: 3rem;
+        }
+        #add_task {
+            outline: none;
+            border: none;
+            border-radius: 14px;
+            color: white;
+            padding: 10px 15px;
+            background: #222;
+            display: block;
+            margin: 10px;
+            width: 80%;
+        }
+        .task_list {
+            color: white;
+        }
+        .task_list li button {
+            /* color: white; */
+            background-color: rgb(228, 212, 212);
+            color: red;
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: none;
+            margin: 10px;
+
+        }
+        .task_list li {
+            margin: 10px;
+        }
+        .addTaskBtn {
+            background-color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 10px;
+            margin: 20px;
+            cursor: pointer;
+        }
+        .addTaskBtn:active {
+            background-color: gray;
+        }
+        .line{
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div style="text-align: center; width: 100%; display: flex; flex-direction: column; align-items: center;">
+            <h1>Task Manager</h1>
+            <input type="text" id="add_task" placeholder="Add Your Task...">
+            <button class="addTaskBtn">Add Task</button>
+        </div>
+
+    </div>
+
+    <ul type="none" class="task_list">
+        <!-- <li>Task 1 <button>Delete</button></li>
+        <li>Task 2 <button>Delete</button></li>
+        <li>Task 3 <button>Delete</button></li>
+        <li>Task 4 <button>Delete</button></li>
+        <li>Task 5 <button>Delete</button></li> -->
+    </ul>
+
+    <script src="toDoList.js"></script>
+</body>
+
+</html>

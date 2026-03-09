@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Time And Set Interval</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        #main{
+            width: 90%;
+            height: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card{
+            border: none;
+            border-radius: 24px;
+            padding: 10px;
+            background-color: rgb(212, 212, 212);
+            filter: drop-shadow(10px 10px 10px gray);
+            text-align: center;
+            width: 60%;
+            height: auto;
+            overflow: hidden;
+            display: none;
+        }
+        img{
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+            border: none;
+            border-radius: 24px;
+            /* box-shadow:5px 5px 1px 1px gray ; */
+            filter: drop-shadow(10px 10px 10px rgb(29, 29, 29));
+        }
+        h1{
+            color:rgb(119, 3, 3) ;
+            font-size: 2rem;
+        }
+        p{
+            font-size: 1rem;
+            padding: 0px 10px;
+        }
+        button{
+            background-color: rgb(255, 255, 255 ,0.258);
+            border: 1px solid darkred;
+            border-radius: 7px;
+            display: block;
+            border-radius: 7px;
+            padding: 5px 10px;
+            margin: 0 auto;
+        }
+        .outer {
+        width: 30%;
+        padding: 20px;
+        border-radius: 16px;
+        background-color: #222;
+        margin: 0 auto;
+        text-align: center;
+        }
+        .progress-card {
+            margin: 10px 0;
+            height: 5px;
+            width: 100%;
+            background-color: #555;
+            border-radius: 7px;
+            overflow: hidden;
+        }
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: white;
+            transition: width 0.3s ease;
+        }
+        .percent {
+            font-size: 16px;
+            font-weight: 500;
+            color: #d1d1d1;
+            letter-spacing: 0.5px;
+        }
+        h2 {
+            color: white;
+        }
+        .photo{
+            width: 100%;
+            height: 0%;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div class="card">
+            <h1>Limited Time Offer</h1>
+            <img src="https://media.istockphoto.com/id/1359180038/photo/wristwatch.jpg?s=612x612&w=0&k=20&c=AWkZ-gaLo601vG5eiQcsjYRjCjDxZdGL7v-jWvvAjEM=" alt="image">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, hic illo labore unde eaque ipsa necessitatibus ea. Corporis ratione officia illum expedita, non exercitationem beatae veritatis incidunt nisi! Beatae, neque!</p>
+            <!-- <h5>Buy Now</h5> -->
+            <b>Just @<s style="opacity: 0.5;">Rs. 5,00,000</s> Rs. 4,80,000</b><br><br>
+            <button>
+                Close
+            </button>
+            <br><br>
+        </div>
+    </div>
+
+     <div id="download">
+      <div class="outer">
+        <h2>Downloading ...</h2>
+        <div class="progress-card">
+          <div class="progress-bar"></div>
+        </div>
+        <p class="percent"></p>
+      </div>
+    </div>
+
+    <!-- <img class="photo" src="https://in.pinterest.com/pin/76842737388665330/" alt="image" /> -->
+
+    <script src="Timmer.js"></script>
+</body>
+</html>

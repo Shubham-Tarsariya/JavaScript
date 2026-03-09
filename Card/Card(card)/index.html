@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card(card_users)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+    .flip-card-inner {
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+    .flip-card-front, .flip-card-back {
+        backface-visibility: hidden;
+    }
+    .flip-card-back {
+        transform: rotateY(180deg);
+    }
+    </style>
+</head>
+<body class="grid grid-cols-4">
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background:#e9e9e9;
+            font-family: Arial, Helvetica, sans-serif;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        /* Main Card */
+        .card{
+            display:flex;
+            width:500px;
+            border-radius:20px;
+            overflow:hidden;
+            box-shadow:0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        /* Left Side */
+        .left{
+            background:#0f1613;
+            width:150px;
+            position:relative;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+        }
+
+        .left img{
+            width:70px;
+            height:70px;
+            border-radius:12px;
+            margin-bottom:40px;
+        }
+
+        .vertical{
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            color:#888;
+            letter-spacing:4px;
+            font-size:12px;
+        }
+
+        /* Right Side */
+        .right{
+            background:white;
+            flex:1;
+            padding:40px;
+        }
+
+        .location{
+            color:#f59d2a;
+            font-size:12px;
+            letter-spacing:2px;
+        }
+
+        .name{
+            font-size:34px;
+            font-weight:bold;
+            margin:10px 0 30px 0;
+        }
+
+        .label{
+            color:#aaa;
+            font-size:11px;
+            letter-spacing:1px;
+        }
+
+        .info{
+            font-weight:bold;
+            margin-bottom:20px;
+        }
+
+        .buttons{
+            margin-top:20px;
+            display:flex;
+            gap:15px;
+        }
+
+        .contact{
+            background:#0f1613;
+            color:white;
+            border:none;
+            padding:14px 40px;
+            border-radius:10px;
+            font-weight:bold;
+            cursor:pointer;
+        }
+
+        .share{
+            border:1px solid #ddd;
+            background:white;
+            padding:14px 16px;
+            border-radius:10px;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+
+    <div class="left">
+        <img src="https://i.pinimg.com/736x/c9/38/ef/c938ef24749aa415715cc30569c68a5f.jpg" alt="profile">
+        <div class="vertical">IDENTITY CARD</div>
+    </div>
+
+    <div class="right">
+
+        <div class="location">📍 LONDON, UNITED KINGDOM</div>
+
+        <div class="name">Marcus Sterling</div>
+
+        <div class="label">ELECTRONIC MAIL</div>
+        <div class="info">m.sterling@finance.co</div>
+
+        <div class="label">DIRECT LINE</div>
+        <div class="info">+44 7700 900234</div>
+
+        <div class="buttons">
+            <button class="contact">CONTACT</button>
+            <button class="share">🔗</button>
+        </div>
+
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

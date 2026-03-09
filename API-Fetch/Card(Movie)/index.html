@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Anime Card</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body{
+background: linear-gradient(135deg,#e0f2fe,#f8fafc);
+}
+
+.glass{
+background: rgba(255,255,255,0.25);
+backdrop-filter: blur(12px);
+border: 1px solid rgba(255,255,255,0.3);
+}
+
+.card-animate{
+transition: all 0.4s ease;
+}
+
+.card-animate:hover{
+transform: translateY(-8px) scale(1.02);
+}
+</style>
+
+</head>
+
+<body class="min-h-screen grid grid-cols-3 gap-10  bg-gray-900 selection:bg-indigo-500 selection:text-white antialiased font-sans p-6"></body>
+    <!-- <div class="glass card-animate max-w-5xl rounded-3xl shadow-2xl overflow-hidden grid md:grid-cols-2">
+
+    <div class="relative">
+    <img src="https://myanimelist.net/images/anime/4/78280l.jpg"  class="w-full h-full object-cover">
+
+    <div class="absolute top-4 left-4 bg-white/60 backdrop-blur px-4 py-1 rounded-full text-sm font-semibold">
+    Movie
+    </div>
+
+    </div>
+
+    <div class="p-8 flex flex-col justify-between">
+
+    <div>
+
+    <h1 class="text-3xl font-bold text-gray-800 mb-2">
+    Boruto: Naruto the Movie
+    </h1>
+
+    <p class="text-sm text-gray-500 mb-4">
+    BORUTO -NARUTO THE MOVIE-
+    </p>
+
+    <p class="text-gray-600 text-sm leading-relaxed mb-6">
+    The spirited Boruto Uzumaki, son of Seventh Hokage Naruto, is a skilled ninja who possesses the same passion his father once had. However, Naruto’s absence drives Boruto to prove himself during the Chunin exams, leading to a dangerous battle that threatens the peace of the Hidden Leaf Village.
+    </p>
+
+    <div class="grid grid-cols-2 gap-4 text-sm">
+
+    <div class="glass p-3 rounded-xl">
+    <p class="font-semibold text-gray-700">Genre</p>
+    <p class="text-gray-600">Action, Adventure, Fantasy</p>
+    </div>
+
+    <div class="glass p-3 rounded-xl">
+    <p class="font-semibold text-gray-700">Studio</p>
+    <p class="text-gray-600">Studio Pierrot</p>
+    </div>
+
+    <div class="glass p-3 rounded-xl">
+    <p class="font-semibold text-gray-700">Duration</p>
+    <p class="text-gray-600">1 hr 35 min</p>
+    </div>
+
+    <div class="glass p-3 rounded-xl">
+    <p class="font-semibold text-gray-700">Release</p>
+    <p class="text-gray-600">Aug 7, 2015</p>
+    </div>
+
+    <div class="glass p-3 rounded-xl">
+    <p class="font-semibold text-gray-700">Score</p>
+    <p class="text-gray-600">7.37 ⭐</p>
+    </div>
+
+    <div class="glass p-3 rounded-xl">
+    <p class="font-semibold text-gray-700">Rating</p>
+    <p class="text-gray-600">PG-13</p>
+    </div>
+
+    </div>
+
+    </div>
+
+    <div class="flex gap-4 mt-8">
+
+    <a 
+    href="https://myanimelist.net/anime/28755/Boruto__Naruto_the_Movie"
+    target="_blank"
+    class="px-6 py-2 bg-blue-500 text-white rounded-xl shadow hover:bg-blue-600 transition"
+    >
+    View Details
+    </a>
+
+    <a 
+    href="https://www.youtube-nocookie.com/embed/ld-oqpvOBAk"
+    target="_blank"
+    class="px-6 py-2 bg-white/60 backdrop-blur rounded-xl shadow hover:bg-white transition"
+    >
+    Watch Trailer
+    </a>
+
+    </div>
+
+    </div>
+
+    </div> -->
+    <script src="script.js"></script>
+</body>
+</html>

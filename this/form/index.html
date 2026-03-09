@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Card</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 min-h-screen">
+    <form autocomplete="off" action="" class="bg-white/90 background-blur rounded-2xl p-8 mb-12 w-full max-w-lg mx-auto mt-10 border border-blue-100">
+        <h1 class="text-center text-4xl text-blue-950 mb-5 font-semibold">Add User</h1>
+        <div class="mb-5">
+            <label class="text-gray-500 mb-2 font-medium " for="name">Name</label>
+            <input class="outline-none focus:outline-none border border-blue-100 px-4 py-2 w-full rounded focus:ring-2  focus:ring-blue-400" type="text" name="name" placeholder="Give Your Name">
+        </div>
+        <div class="mb-5">
+            <label class="text-gray-500 mb-2 font-medium " for="role">Role</label>
+            <input class="outline-none focus:outline-none border border-blue-100 px-4 py-2 w-full rounded focus:ring-2  focus:ring-blue-400" type="text" name="role" placeholder="Give Your Role">
+        </div>
+        <div class="mb-5"> 
+            <label class="text-gray-500 mb-2 font-medium " for="bio">Bio</label>
+            <input class="outline-none focus:outline-none border border-blue-100 px-4 py-2 w-full rounded focus:ring-2  focus:ring-blue-400" type="text" name="bio" placeholder="Give Your bio">
+        </div>
+        <div class="mb-5">
+            <label class="text-gray-500 mb-2 font-medium " for="img">Image URL</label>
+            <input class="outline-none focus:outline-none border border-blue-100 px-4 py-2 w-full rounded focus:ring-2  focus:ring-blue-400" type="text" name="img" placeholder="Give Your Image URL">
+        </div>
+        <button class="w-full bg-gradient-to-br from blue-500 via-purple-500 to-pink-500 hover:from-pink-500 hover:to-blue-500 transition text-white-px py-3 font-semibold shadow-lg rounded-lg hover:shadow-2x text-white">Create Card</button>
+    </form>
+
+    <div class="users grid grid-cols-1 md:grid-cols-3 gap-4 px-6 max-w-6xl mx-auto">
+
+        
+        <!-- <div class="card bg-white/80 backdrop-blur rounded-2xl flex items-center gap-4 justify-center flex-col p-4">
+            <img src="https://i.pinimg.com/1200x/2b/08/d9/2b08d9022ca02a97b65119d2b1913f81.jpg" alt="" class="w-60 h-60 rounded-full object-cover my-5 border-4 border-blue-100">
+            <h2 class="text-2xl font-bold text-blue-900 mb-1 drop-shadow-xl drop-shadow-blue-100">Abstract</h2>
+            <p class="text-xl font-medium ">Web Developer</p>
+            <p class="px-4 text-center text-md text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum asperiores eaque laboriosam in et? Quos?</p>
+        </div> -->
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
